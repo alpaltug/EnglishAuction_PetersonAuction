@@ -1,0 +1,177 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/alpaltug/Desktop/Alp_Altug/Nokia_internship/auction_demo/contracts/auction.sol": {
+      "lastModificationDate": 1658075450251,
+      "contentHash": "6ebdb2b89d89287c1917c5d1f044e57d",
+      "sourceName": "contracts/auction.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.3"
+      ],
+      "artifacts": [
+        "Auction"
+      ]
+    },
+    "/Users/alpaltug/Desktop/Alp_Altug/Nokia_internship/auction_demo/contracts/auctionSimple.sol": {
+      "lastModificationDate": 1658951584186,
+      "contentHash": "581ec22623d8b0753a3577b40cc0c6a0",
+      "sourceName": "contracts/auctionSimple.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "Auction"
+      ]
+    },
+    "/Users/alpaltug/Desktop/Alp_Altug/Nokia_internship/auction_demo/contracts/auctionComplex.sol": {
+      "lastModificationDate": 1658265934582,
+      "contentHash": "c48c9d1e2297b4e825bba2fb484b99e5",
+      "sourceName": "contracts/auctionComplex.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Auction"
+      ]
+    },
+    "/Users/alpaltug/Desktop/Alp_Altug/Nokia_internship/auction_demo/contracts/auctionPeterson.sol": {
+      "lastModificationDate": 1658952160164,
+      "contentHash": "0f8234aedfc2a5a7072f46469741c65d",
+      "sourceName": "contracts/auctionPeterson.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Auction",
+        "Pederson"
+      ]
+    },
+    "/Users/alpaltug/Desktop/Alp_Altug/Nokia_internship/auction_demo/contracts/PedersenCommitmentSecp256k1.sol": {
+      "lastModificationDate": 1658940968190,
+      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
+      "sourceName": "contracts/PedersenCommitmentSecp256k1.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    }
+  }
+}
