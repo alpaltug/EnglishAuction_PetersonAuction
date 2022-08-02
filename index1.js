@@ -377,15 +377,7 @@ async function fetchBid (b) {
 async function openBid () {
     dataJson = getData();
     console.log("data in promise form", dataJson);
-    dataJson.then(res => {
-      console.log(res)
-      H_x = 1;
-      H_y = 1;
-      _r = 1;
-      _v = 1;
-
-    })
-
+    
     console.log(H_x);
     console.log(H_y);
     console.log(_r);
@@ -428,8 +420,12 @@ async function endAuction () {
 
 async function getData() {
   const response = await fetch(url);
-
-  return response.json();
+  if (!response.ok) {
+    const message = `An error has occured: ${repsone.status}`;
+    throw new Error(message);
+  }
+  const petersonData = await response.json()
+  return petersonData;
 }
 
 
