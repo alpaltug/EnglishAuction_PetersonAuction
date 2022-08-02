@@ -377,6 +377,14 @@ async function fetchBid (b) {
 async function openBid () {
     dataJson = getData();
     console.log("data in promise form", dataJson);
+    dataJson.then(res => {
+      console.log(res)
+      H_x = res.H_x;
+      H_y = res.H_y;
+      _r = res.r;
+      _v = res.v;
+
+    })
     
     console.log(H_x);
     console.log(H_y);
