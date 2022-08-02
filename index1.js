@@ -47,10 +47,13 @@ const petersonAddress = "0xF10CA6F1152f4FB138A939fb930050BeAdE02a51";
 
 var contract;
 
-var H_x = "82312525796946441549129366266799795483742779648232635156512444711477421427795";
-var H_y = "100058829365969444434628394808037827260453106098122001630194601423097368410992";
-var _r = "34271761935775149130412598735157757976663328381407114892535133063593588044481";
-var _v = "20";
+var H_x;
+var H_y;
+var _r;
+var _v;
+
+var url = 'http://0.0.0.0:8002/opening'
+
 
 async function setUpContract () {
 
@@ -341,7 +344,8 @@ async function loadTable () {
 async function placeBid () {
 
     let b1 = document.getElementById('b1').value
-    let b2 = document.getElementById('b2').value
+    let b2 = document.getElementById('b2').value 
+
     console.log(`Bidding with an amount for x ${b1} ...`);
     console.log(`Bidding with an amount for y ${b2} ...`);
     const tx = await contract.placeBid(b1, b2);
@@ -359,7 +363,33 @@ async function placeBid () {
     }
 }
 
+async function fetchBid (b) {
+  fetch(url, {
+    method: 'POST',
+    body: {
+      "value": b
+    }
+  }).then(res => {
+    return res.json()
+  })
+}
+
 async function openBid () {
+    dataJson = getData();
+    console.log("data in promise form", dataJson);
+    dataJson.then(res => {
+      console.log(res)
+      H_x = 1;
+      H_y = 1;
+      _r = 1;
+      _v = 1;
+
+    })
+
+    console.log(H_x);
+    console.log(H_y);
+    console.log(_r);
+    console.log(_v);
 
     const tx = await contract.openBid(petersonAddress, _r, _v, H_x, H_y);
     console.log("The opened bid is:", (tx));
@@ -394,6 +424,12 @@ async function endAuction () {
 
     console.log('Ending auction...');
     const highestBid = await contract.endAuction();
+}
+
+async function getData() {
+  const response = await fetch(url);
+
+  return response.json();
 }
 
 
