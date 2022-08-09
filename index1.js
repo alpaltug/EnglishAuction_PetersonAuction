@@ -22,6 +22,11 @@ async function connectWallet () {
     // For this, you need the account signer...
     signer = provider.getSigner();
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const addr = urlParams.get('value');
+    contractAddress = addr;
+
     let userAddress = await signer.getAddress();
     let net = await provider.getNetwork();
     let netName = net.name;
@@ -42,7 +47,7 @@ async function connectWallet () {
 // greeterf
 //const contractAddress = "0x646Ff94436760740E185060772CEBf99dB2A54b0";
 // 20220713
-const contractAddress = "0xF696670247d5Bb25AE1920093ba2083975bF1867";
+var contractAddress;
 const petersonAddress = "0xF10CA6F1152f4FB138A939fb930050BeAdE02a51";
 
 var contract;

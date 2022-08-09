@@ -19,6 +19,12 @@ async function connectWallet () {
     // For this, you need the account signer...
     signer = provider.getSigner();
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const addr = urlParams.get('value');
+    contractAddress = addr;
+
+
     let userAddress = await signer.getAddress();
     let net = await provider.getNetwork();
     let netName = net.name;
@@ -39,14 +45,21 @@ async function connectWallet () {
 // greeterf
 //const contractAddress = "0x646Ff94436760740E185060772CEBf99dB2A54b0";
 // 20220713
-const contractAddress = "0x6C7BEbe2611a3404136BeB30Ccf34633172ea56C";
+var contractAddress;
 
 var contract;
 
+var data;
+
+var url = 'http://0.0.0.0:8002/opening'
+
+
 async function setUpContract () {
+
 
     //import abi from "../abis/contract.json";
     //const contractabi = JSON.parse('../abis/contract.json'); // the ABI
+
 
     
     
@@ -304,6 +317,8 @@ async function getHighestBid () {
 
 
 }
+
+
 
 
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Auction 2.0 </title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+
+        <!-- Importing ethers.js -->
+       <script
+            src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+            type="application/javascript">
+        </script>
+
+        <script
+            src="./index2.js"
+            type = "application/javascript">
+        </script>
+
+        <nav>
+            <div class = "left">
+            Auction House 1.0
+            </div>
+            <div class = "right">
+            <span style = 'color:yellow'>Wallet: &nbsp;&nbsp;</span> <span id = "wallet">
+                <button name = "button" type = "button" 
+                    onclick = "connectWallet()"
+                    class = "navbutton">
+                    Connect
+                </button>
+            </span>
+            </div>
+        </nav>
+
+        <div class = "flexcontainer">
+        <div>
+        <table class = "styled-table">
+            <thead>
+                <tr>
+                    <th colspan = 2>Auction Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Address</td>
+                    <td id = "cAddress" width = 400px class = "address"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan = 2>
+                        <button name = "button" type = "button" 
+                        onclick = "loadTable1()"
+                        class = "navbutton">
+                        REFRESH
+                        </button>
+                    </th>
+                </tr>
+            </tfoot>
+                <tbody id="tableData"></tbody>
+            </table>
+        </tfoot>
+    </table>
+            </tbody>
+        </table>
+        </div>
+        <div>
+        <table class = "styled-table">
+            <thead><tr><th colspan = 2>Interact with Contract</th></tr></thead>
+            <tbody><tr><td>
+            <form>
+                <p>Please enter the auction description:</p>
+                <input type = "text" placeholder = "enter auction desc" id = "name" />
+                <input type="checkbox" id="checkbox" name="checkbox" value="pederson"checked>
+                <label for="type_auction"> Pederson Auction</label><br>
+            </form>
+            </td>
+            <td><button type = "button"
+                onclick = "CreateNewContract()"
+                class = "navbutton">
+                CREATE NEW AUCTION
+                </button></td>
+            <td><button type = "button"
+                onclick = "setIdx()"
+                class = "navbutton">
+                
+                Go to this auction
+                </button></td>
+                <form>
+                    <p>Please enter the auction number:</p>
+                    <input type = "text" placeholder = "enter auction id" id = "auc" />
+                </form>
+            </tbody>
+        </table>
+        </div>
+        </div>
+
+    </body>
+    </html>
